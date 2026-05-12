@@ -1,0 +1,4 @@
+# Cały folder (index.html, styles.css, script.js, images/) wgrywasz na Netlify —
+# „Publish directory” to katalog główny projektu.
+[build]
+  publish = "."

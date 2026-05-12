@@ -1,0 +1,39 @@
+JAK ZOBACZYĆ STRONĘ, WKLEJAJĄC ADRES W SAFARI
+============================================
+
+1) Zaznacz cały podświetlony adres w linii poniżej (bez spacji przed czy po).
+
+2) Skopiuj: Cmd + C
+
+3) W Safari wklej w pasek na górze: Cmd + V i naciśnij Enter
+
+
+--- SKOPIUJ TYLKO TĘ JEDNĄ LINIĘ (od „file:” aż do „html”): ---
+
+file:///Users/jakubdratwa/Projects/jakubdratwa%20strona%20o%20mnie/index.html
+
+--- KONIEC LINII DO SKOPIOWANIA ---
+
+
+Dlaczego to działa, a localhost:3000 nie
+------------------------------------------
+To jest adres DO PLIKU na Twoim Macu (tak bezpiecznie otwierasz index.html
+z tego folderu). Nie trzeba wtedy włączać „serwera” w Terminalu.
+
+Adres 127.0.0.1 / localhost ma sens tylko wtedy, gdy osobno uruchomisz
+Otworz-lokalna-strone.command (to drugi, opcjonalny sposób).
+
+Jeśli przeniesiesz folder ze stroną
+-----------------------------------
+Powyższy link przestanie działać (wskazuje na starą ścieżkę). Wtedy:
+- kliknij dwa razy: Otworz-podglad-w-Safari.command
+lub
+- zaktualizuj ścieżkę w tym pliku: przeciągnij index.html do okna Terminala
+  żeby zobaczyć pełną drogę, a potem zbuduj link:
+  file:///TWOJA_DROGA/index.html
+  (spacje w nazwie folderów zamień na %20)
+
+Filmy z YouTube
+----------------
+W większości przypadków ładują się też z „file:”. Gdy puste ramki, uruchom
+Otworz-lokalna-strone.command (serwer lokalny) albo wgraj stronę w internecie.

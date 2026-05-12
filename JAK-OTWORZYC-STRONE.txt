@@ -1,0 +1,48 @@
+JAK ZOBACZYĆ STRONĘ (na swoim Macu) — w kilku zdaniach
+====================================================
+
+SPOSÓB A — WKLEIĆ W SAFARI (bez Terminala, bez serwera)
+--------------------------------------------------------
+1) Otwórz plik: WKLEJ-TEN-ADRES-W-SAFARI.txt
+2) Skopiuj linię zaczynającą się od file: i wklej w pasek adresu w Safari, Enter.
+   (Dokładny tekst w tym pliku — jedna linia.)
+Albo dwa razy kliknij: Otworz-podglad-w-Safari.command — też otworzy tę stronę.
+
+SPOSÓB B — ADRES TYPU localhost:3333 (wymaga uruchomionego serwera)
+-----------------------------------------------------------------
+Adres w przeglądarce (np. http://127.0.0.1:3333/) DZIAŁA TYLKO WTEDY, gdy
+w tle jest uruchomiony mały "serwer" z plikami strony. Samo wpisywanie adresu
+bez tego kroku = pusta strona albo błąd. To normalne.
+
+NAJPROŚCIEJ (serwer lokalny)
+----------------------------
+1) W folderze tej strony kliknij dwa razy plik:
+      Otworz-lokalna-strone.command
+
+2) (Jeśli macOS zapyta o uprawnienia — zezwól uruchomieniu.)
+
+3) Pojawi się okno Terminala i otworzy się przeglądarka z Twoją stroną.
+   NIE ZAMYKAJ tego okna Terminala, dopóki oglądasz stronę w przeglądarce.
+   Gdy skończysz, wróć do Terminala i naciśnij Enter (zgodnie z tekstem w oknie).
+
+Ustalony adres lokalny:
+  http://127.0.0.1:3333/
+
+( Możesz też użyć http://localhost:3333/ — to to samo. )
+
+
+DLACZEGO NIE DZIAŁAŁO localhost:3000
+------------------------------------
+Ten numer portu (3000) miał tylko przykładowa komenda z programu "npx serve".
+Jeśli nie odpalono tamtej komendy w tym samym momencie, na porcie 3000 nikt
+nie słuchał — stąd pusta strona. Używamy teraz prostszej metody: Python, port 3333
+i plik Otworz-lokalna-strone.command.
+
+Kiedy będzie DZIAŁAĆ NAZWA DOMENY (np. jakubdratwa.pl)
+-------------------------------------------------------
+Dopiero gdy wgrasz te pliki na hosting w internecie i w panelu domeny
+ustawisz DNS na ten hosting. Wtedy wpisujesz w przeglądarce swoją domenę
+bez npx i bez Terminala. Do tej pory: albo dwa razy kliknij index.html, albo
+Otworz-lokalna-strone.command
+
+Szczegóły krok po kroku (Netlify + domena): plik JEDEN-KROTKI-ADRES.txt, sekcja C.

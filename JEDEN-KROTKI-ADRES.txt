@@ -1,0 +1,83 @@
+================================================================================
+  JEDEN KRÓTKI ADRES DO WKLEJENIA W PRZEGLĄDARCE
+================================================================================
+
+Nie da się zrobić prawdziwej „domeny w stylu strona.pl” tylko na Macu, bez
+internetowego hostingu. Są tylko dwie sensowne drogi poniżej.
+
+--------------------------------------------------------------------------------
+A) TYLKO NA TWOIM KOMPUTERZE — krótki link:  http://127.0.0.1:3333
+--------------------------------------------------------------------------------
+
+Ten adres to ZAWSZE ta sama, krótka strona. Działa, gdy włączysz serwer
+jednym kliknięciem.
+
+KROK 1. W Finderze wejdź w folder z tą stroną (ten, gdzie jest index.html).
+
+KROK 2. Dwa razy kliknij plik:   Otworz-lokalna-strone.command
+
+KROK 3. Pojawi się okno (Terminal) i Safari sama często się otworzy.
+        Jeśli chcesz sam wkleić link — w pasek adresu Safari wklej TYLKO TO:
+
+        http://127.0.0.1:3333
+
+        i naciśnij Enter. Zobaczysz tę stronę.
+
+KROK 4. Okna Terminala NIE ZAMYKAJ, dopóki oglądasz stronę. Zamknięcie
+        = koniec serwera, a link 127.0.0.1:3333 przestanie odpowiadać.
+
+KROK 5 (opcj). W Safari: Zakładka / Ulubione — dodaj  http://127.0.0.1:3333
+        Dzięki temu wklejasz dalej ten sam skrót (po wcześniejszym kroku 2).
+
+
+--------------------------------------------------------------------------------
+B) W INTERNECIE — jeden link z każdego miejsca (telefon, czyjaś przeglądarka)
+--------------------------------------------------------------------------------
+
+Żeby wkleić w przeglądarce NAZWĘ STRONY i zawsze działała, trzeba wgrać
+pliki na darmowy hosting. Najprościej: Netlify (przeciągnij folder).
+
+1. Wejdź w przeglądarce na:  https://app.netlify.com/drop
+2. (Jeśli poprosi o konto — załóż darmowe na ten sam e-mail.)
+3. Przeciągnij CAŁY FOLDER strony (z index.html) na stronę Netlify.
+4. Dostaniesz adress w stylu:  https://losowa-nazwa-12345.netlify.app
+   To jest JUŻ Twój „jeden” link do wklejania. Możesz później zmienić nazwę
+   w ustawieniach projektu na Netlify.
+
+Dopiero po opublikowaniu możesz w panelu domeny kierować jakubdratwa.pl
+na ten hosting (albo wgrać to samo na serwer gdzie masz tę domenę).
+
+
+--------------------------------------------------------------------------------
+C) Żeby w przeglądarce działało  https://jakubdratwa.pl  (Twoja domena)
+--------------------------------------------------------------------------------
+
+1. Opublikuj TĘ SAMĄ zawartość co na dysku: index.html, styles.css, script.js
+   oraz CAŁY folder  images/  (bez niego zdjęcia w hero i w historii znikną).
+
+2. Na Netlify: po wgraniu strony wejdź w ustawienia witryny →
+   „Domain management” / „Domeny” → „Add custom domain” → wpisz:
+        jakubdratwa.pl
+   (opcjonalnie też  www.jakubdratwa.pl  — Netlify zaproponuje przekierowanie.)
+
+3. Netlify pokaże rekordy DNS do ustawienia u rejestratora domeny (tam gdzie
+   kupiłeś jakubdratwa.pl). Zwykle to jeden rekord typu A lub ALIAS dla samej
+   domeny i ewentualnie CNAME dla www — skopiuj DOKŁADNIE to, co podaje Netlify.
+
+4. Po zapisaniu DNS odczekaj od kilku minut do ~48 h (często ok. godziny),
+   potem  https://jakubdratwa.pl  powinno pokazywać tę stronę. Certyfikat HTTPS
+   Netlify włącza się sam po wykryciu poprawnej konfiguracji.
+
+5. Jeśli domena jest już podpięta gdzie indziej (inny hosting): wgraj te same
+   pliki tam albo zmień rekordy DNS tak, żeby wskazywały na nowy hosting
+   (np. Netlify), zgodnie z instrukcją u nowego dostawcy.
+
+
+================================================================================
+PODSUMOWANIE
+================================================================================
+  • Tylko Mac, bez konta, krótki adres:  http://127.0.0.1:3333
+    (najpierw klik: Otworz-lokalna-strone.command)
+
+  • Dla wszystkich, zawsze, z telefonu:  opublikuj folder (np. Netlify Drop)
+    i wklejaj link, który strona poda, np.  https://… .netlify.app
